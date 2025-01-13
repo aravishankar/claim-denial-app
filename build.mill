@@ -1,0 +1,21 @@
+package build
+import mill._
+import scalalib._
+import pythonlib._
+
+object frontend extends Module
+
+object backend extends ScalaModule {
+  def scalaVersion = "3.3.4"
+}
+
+object analysis extends PythonModule {
+  // You can have arbitrary numbers of third-party libraries
+  def pythonDeps = Seq(
+    // Requirements go here.
+    "MarkupSafe==3.0.2",
+    "Jinja2==3.1.4"
+  )
+  // Please read: https://mill-build.org/mill/pythonlib/dependencies.html#_adding_dependencies_via_requirements_txt_files.
+  // def pythonRequirementFiles = Task.Sources { millSourcePath / "requirements.txt" }
+}
