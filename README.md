@@ -10,3 +10,5 @@ TODO:
 - Docker for backend and analysis, take a look a Pulumi
 - Choose web framework, etc
   - Add d3.js chart
+
+Use `/mill` to build and run all things.
