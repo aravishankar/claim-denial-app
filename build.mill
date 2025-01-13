@@ -3,10 +3,11 @@ import mill._
 import scalalib._
 import pythonlib._
 
-object frontend extends Module
-
-object backend extends ScalaModule {
-  def scalaVersion = "3.3.4"
+object website extends Module {
+  object frontend extends Module
+  object backend extends ScalaModule {
+    def scalaVersion = "3.3.4"
+  }
 }
 
 object analysis extends PythonModule {
